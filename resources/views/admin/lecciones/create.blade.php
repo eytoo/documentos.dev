@@ -64,6 +64,17 @@ enctype="multipart/form-data"
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
+                        <label class="control-label" for="ent_3">Video</label>
+                        <select onchange="$('.vimeo-id').val($(this).val())" name="video_id" required id="ent_3" class="form-control select2">
+                            <option value=""> -- Selecciona -- </option>
+                            @foreach ($videos as $v)
+                              <option @if(isset($object) && explode("/",$v["uri"])[2] == $object->lec_ruta_video) selected @endif value="{{ explode("/",$v["uri"])[2] }}">{{ $v["name"] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
                         <label>ID del video (Vimeo) <small>(Ejm: https://vimeo.com/<strong>172825105</strong>)</small></label>
                         <div class="input-group">
                             <span class="input-group-addon">https://vimeo.com/</span>

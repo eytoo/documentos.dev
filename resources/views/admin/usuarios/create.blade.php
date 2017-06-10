@@ -23,7 +23,7 @@ enctype="multipart/form-data"
 
 @section('form')
 	@if(isset($object))
-	<input type="hidden" name="id" value="{{ $object->user_id }}">
+	<input type="hidden" name="id" value="{{ $object->id }}">
 	@endif
 	<div class="row">
         <div class="col-md-6">
@@ -44,7 +44,7 @@ enctype="multipart/form-data"
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input value="{{ isset($object)?$object->user_email:'' }}" type="text" class="form-control" required name="user_email" id="email" placeholder="E-mail">
+                        <input value="{{ isset($object)?$object->email:'' }}" type="text" class="form-control" required name="email" id="email" placeholder="E-mail">
                     </div>
                 </div>
                 <div class="col-md-12">

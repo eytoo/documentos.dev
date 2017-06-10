@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
@@ -6,6 +6,8 @@ use App\Leccion;
 use App\Tema;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Session;
+use Config;
 
 class LeccionController extends Controller {
 
@@ -27,6 +29,17 @@ class LeccionController extends Controller {
      */
     public function index(Request $request)
     {
+        if(!Session::has("vimeo_access_token")){
+          Session::put("state",str_random(60));
+          Session::put("redir",url()->full());
+          $lib = new \Vimeo\Vimeo(Config::get("services.vimeo.client_id"),Config::get("services.vimeo.client_secret"));
+          return 'Inicia sesión en vimeo <a href="'
+  			. $lib->buildAuthorizationEndpoint(Config::get("services.vimeo.redirect"), 'private', Session::get("state"))
+  			. '">here</a><br />';
+        }
+
+        Session::forget("redir");
+
         if ($request->has("tema")) {
             session(["tema_id" => $request->input("tema")]);
         }
@@ -39,6 +52,24 @@ class LeccionController extends Controller {
         return view("admin." . str_slug($this->data["entity_p"]) . ".index")->with($this->data);
     }
 
+    public function validar()
+    {
+        if (Session::get('state') != $_GET['state']) {
+          return 'Error de login';
+        }
+        $lib = new \Vimeo\Vimeo(Config::get("services.vimeo.client_id"),Config::get("services.vimeo.client_secret"));
+        $tokens = $lib->accessToken($_GET['code'], Config::get("services.vimeo.redirect"));
+        if ($tokens['status'] == 200) {
+          Session::put('vimeo_access_token',$tokens['body']['access_token']);
+          Session::forget("state");
+
+          return redirect(Session::get("redir"));
+        } else {
+          var_dump($tokens);
+        }
+    }
+
+
   /**
    * Show the form for creating a new resource.
    *
@@ -46,6 +77,10 @@ class LeccionController extends Controller {
    */
   public function create()
   {
+      $lib = new \Vimeo\Vimeo(Config::get("services.vimeo.client_id"),Config::get("services.vimeo.client_secret"), Session::get('vimeo_access_token'));
+      $videos = $lib->request('/me/videos');
+
+      $this->data["videos"] = $videos["body"]["data"];
       return view("admin." . str_slug($this->data["entity_p"]) . ".create")->with($this->data);
   }
 
@@ -101,7 +136,7 @@ class LeccionController extends Controller {
    */
   public function show($id)
   {
-    
+
   }
 
   /**
@@ -112,6 +147,10 @@ class LeccionController extends Controller {
    */
   public function edit($id)
   {
+      $lib = new \Vimeo\Vimeo(Config::get("services.vimeo.client_id"),Config::get("services.vimeo.client_secret"), Session::get('vimeo_access_token'));
+      $videos = $lib->request('/me/videos');
+
+      $this->data["videos"] = $videos["body"]["data"];
       $object               = Leccion::withTrashed()->where("lec_id", $id)->where("tema_id", session("tema_id"))->first();
       $this->data["object"] = $object;
       return view("admin." . str_slug($this->data["entity_p"]) . ".create")->with($this->data);
@@ -125,7 +164,7 @@ class LeccionController extends Controller {
    */
   public function update($id)
   {
-    
+
   }
 
     /**
@@ -162,7 +201,7 @@ class LeccionController extends Controller {
             "mensaje" => "No se encuentra " . str_slug($this->data["entity_pro"]) . " " . $this->data["entity_s"] . " con el id: " . $id,
         ]);
     }
-  
+
 }
 
 ?>

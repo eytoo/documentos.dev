@@ -16,11 +16,12 @@
     <table id="myTable" class="datatable table-white-space table table-hover card-table zero-configuration table-middle">
         <thead>
         <tr>
-            <th>Id</th>
+            <!--<th>Id</th>-->
             <th>Nombre</th>
             <th>Categoría</th>
             <th>Estado</th>
             <th>Tipo</th>
+            <th>Lecc.</th>
             <th>Precio</th>
             <th class="text-center"><i class="icon-cog"></i></th>
         </tr>
@@ -28,7 +29,7 @@
         <tbody>
         @forelse ($dataList as $object)
             <tr>
-                <td>{{ $object->cur_id }}</td>
+                <!--<td>{{ $object->cur_id }}</td>-->
                 <td><a data-modal="byUrl" href="{{ route(str_slug($entity_p).".edit",[$object->cur_id]) }}">{{ $object->cur_nombre }}</a></td>
                 <td>{{ $object->categoria->cat_nombre }}</td>
                 <td>
@@ -36,6 +37,9 @@
                 </td>
                 <td>
                     <span class="tag tag-default">{{ getTipo($object->cur_tipo) }}</span>
+                </td>
+                <td>
+                    {{ cantLecciones($object) }}
                 </td>
                 <td>
                     {{ getMoneda($object->cur_precio) }}

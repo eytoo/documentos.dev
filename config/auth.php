@@ -11,10 +11,10 @@ return [
     | reset options for your application. You may change these defaults
     | as required, but they're a perfect start for most applications.
     |
-    */
+     */
 
-    'defaults' => [
-        'guard' => 'web',
+    'defaults'  => [
+        'guard'     => 'web',
         'passwords' => 'users',
     ],
 
@@ -33,17 +33,22 @@ return [
     |
     | Supported: "session", "token"
     |
-    */
+     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
+    'guards'    => [
+        'web'    => [
+            'driver'   => 'session',
             'provider' => 'users',
         ],
 
-        'api' => [
-            'driver' => 'token',
+        'api'    => [
+            'driver'   => 'token',
             'provider' => 'users',
+        ],
+
+        'client' => [
+            'driver'   => 'session',
+            'provider' => 'client',
         ],
     ],
 
@@ -62,19 +67,20 @@ return [
     |
     | Supported: "database", "eloquent"
     |
-    */
+     */
 
     'providers' => [
-        'users' => [
+        'users'  => [
             'driver' => 'eloquent',
-            'table' => "admins",
-            'model' => App\Admin::class,
+            'table'  => "admins",
+            'model'  => App\Admin::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'client' => [
+            'driver' => 'eloquent',
+            'table'  => 'users',
+            'model'  => App\User::class,
+        ],
     ],
 
     /*
@@ -90,13 +96,13 @@ return [
     | considered valid. This security feature keeps tokens short-lived so
     | they have less time to be guessed. You may change this as needed.
     |
-    */
+     */
 
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
+            'table'    => 'password_resets',
+            'expire'   => 60,
         ],
     ],
 

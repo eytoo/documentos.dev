@@ -5,18 +5,30 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Curso extends Model {
+class Curso extends Model
+{
 
-	protected $table = 'cursos';
-	public $timestamps = true;
-	protected $primaryKey = "cur_id";
+    protected $table      = 'cursos';
+    public $timestamps    = true;
+    protected $primaryKey = "cur_id";
 
-	use SoftDeletes;
+    use SoftDeletes;
 
-	protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at'];
 
-    public function categoria(){
-        return $this->hasOne(Categoria::class,"cat_id","cat_id");
+    public function categoria()
+    {
+        return $this->hasOne(Categoria::class, "cat_id", "cat_id");
+    }
+
+    public function profesor()
+    {
+        return $this->belongsTo(Profesor::class, "prof_id", "prof_id");
+    }
+
+    public function temas()
+    {
+        return $this->hasMany(Tema::class, "cur_id", "cur_id");
     }
 
 }

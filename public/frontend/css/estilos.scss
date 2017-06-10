@@ -1,0 +1,1375 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+$raleway:'Raleway', sans-serif;
+$roboto:  'Roboto', sans-serif;
+/*==================================
+============ STAR COLORES ==========
+==================================*/
+
+$negro:#333333;
+$plomo:#727272;
+$celeste:#4795E2;
+$rosado:#FF5A92;
+$azul:#2A60AE;
+$blanco:#fff;
+$verde: #1CD146;
+$plomo_links: #3a3a3a;
+
+/*==================================
+============= END COLORES ==========
+==================================*/
+
+/*==================================
+========= STAR MENU BLANCO =========
+==================================*/
+.iconNav{
+    background:transparent !important;
+    &_plomo{
+        color:$plomo !important;
+    }
+}
+.icono-buscador{
+    &.blanco{
+        color:$blanco!important;
+    }
+    &.plomo{
+        color:$plomo!important;
+    }
+}
+.color{
+    width: 100%;
+    height: 48px;
+    z-index: 123;
+    background:$blanco;
+    .indicator{
+        background:$blanco;
+    }
+    .tabs-colorBlanco{
+        color:$blanco !important;
+    }
+}
+.blancoAside{
+    .sin-sombra{
+        .mdi-navigation-menu{
+            color: $blanco;
+        }
+    }
+}
+
+/*==================================
+========== END MENU BLANCO =========
+==================================*/
+
+/*==================================
+============ STAR RECURSOS =========
+==================================*/
+ol{
+    padding-left: 17px;
+}
+.colorBlan{
+    color: $blanco!important;
+}
+p{
+    color: $plomo;
+}
+hr{
+    height: 1px;
+    border: 0;
+    background-color: #dcdcdc;
+}
+.botom-precio{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family:$roboto;
+    .soles{
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+.sin-sombra{
+    box-shadow:0px 0px 0px transparent;
+}
+.sin-margin{
+    margin-bottom: 0;
+}
+.no-padding{
+    padding:0;
+}
+.con-padding{
+    padding: 8px 30px !important;
+}
+body{
+    font-family: $raleway;
+}
+
+/*==================================
+=========== END RECURSOS ===========
+==================================*/
+
+
+
+/*==================================
+============ STAR MIXINS ===========
+==================================*/
+@mixin relacionados{
+    .relacionados{
+            &-content{
+                position:relative;
+                margin: 10px 0px;
+                .imagen{
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    background-position: center;
+                    background-size: 220px;
+                    border-radius:8px;
+                }
+                .descrip{
+                    margin-left: 120px;
+                    h4{
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin:0;
+                    }
+                    p{
+                        margin:5px 0px;
+                    }
+                }
+            }
+        }
+}
+@mixin puntaje{
+    .puntaje{
+        position:relative;
+        font-family: $roboto;
+        &-numero{
+            position: absolute;
+            margin: 0;
+            left: 0;
+            font-weight: 600;
+        }
+        &-estrellitas{
+            margin-left: 70px;
+            margin-bottom: 20px;
+            i{
+                font-size: 25px;
+                color: $celeste;
+            }
+            span{
+                display: block;
+                text-transform: uppercase;
+                font-size:12px;
+            }
+        }
+    }
+}
+@mixin item{
+    .items{
+        position:relative;
+        img{
+            position:absolute;
+            width: 57px;
+        }
+        .nombre{
+            margin-left: 70px;
+            h4{
+                margin: 0px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+        p{
+            font-weight: 500;
+        }
+        .estrella{
+            color: $celeste;
+            i{
+                font-size: 15px;
+                margin-right: 1px;
+            }
+        }
+    }
+}
+@mixin itemTestimonio{
+    .items{
+        position:relative;
+        img{
+            position:absolute;
+            width: 57px;
+            top: -5px;
+        }
+        .nombre{
+            margin-left: 70px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            h4{
+                margin: 0px;
+                font-size: 21px;
+                font-weight: bold;
+            }
+            h4+span{
+                font-size: 16px;
+                font-weight: 400;
+                color: $plomo;
+            }
+        }
+        p{
+            font-weight: 500;
+        }
+        .estrella{
+            color: $celeste;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@mixin redesSociales{
+    .social{
+                list-style-type: none;
+                margin: 10px 0px 0px 0px;
+                padding: 0;
+                li{
+                    display: inline-block;
+                    .ease-all{
+                        -webkit-transition: all 400ms ease-in-out;
+                        -moz-transition: all 400ms ease-in-out;
+                        -o-transition: all 400ms ease-in-out;
+                        -ms-transition: all 400ms ease-in-out;
+                        transition: all 400ms ease-in-out;
+                    }
+                    a{
+
+                        display: inline-block;
+                        width: 36px;
+                        height: 36px;
+                        margin-right: 2px;
+                        text-align: center;
+                        padding-top: 8px;
+                        font-size: 16px;
+                        -webkit-border-radius:50%;
+                        -moz-border-radius:50%;
+                        -o-border-radius:50%;
+                        -ms-border-radius:50%;
+                        border-radius:50%;
+
+                        color: $blanco;
+                        -webkit-box-shadow: inset 0 0 0 40px darken($blanco,30);
+                        -moz-box-shadow: inset 0 0 0 40px darken($blanco,30);
+                        -o-box-shadow: inset 0 0 0 40px darken($blanco,30);
+                        -ms-box-shadow: inset 0 0 0 40px darken($blanco,30);
+                        box-shadow: inset 0 0 0 40px darken($blanco,30);
+                        &:hover{
+                            -webkit-box-shadow: inset 0 0 0 3px darken($blanco,30);
+                            -moz-box-shadow: inset 0 0 0 3px darken($blanco,30);
+                            -o-box-shadow: inset 0 0 0 3px darken($blanco,30);
+                            -ms-box-shadow: inset 0 0 0 3px darken($blanco,30);
+                            box-shadow: inset 0 0 0 3px darken($blanco,30);
+
+                            color: darken($blanco,30);
+                        }
+                    }
+                }
+            }
+}
+@mixin titulo{
+    .titulo{
+        h2{
+            color: $plomo_links;
+            font-size: 2.7rem;
+            font-weight: 700;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            @media(max-width:500px){
+                font-size: 2.3rem;
+            }
+            span{
+                color:$celeste;
+            }
+        }
+        .hr{
+            width: 10%;
+            height: 3px;
+            background: $celeste;
+        }
+        p{
+            font-size: 20px;
+            line-height: 27px;
+            margin-top: 12px;
+        }
+    }
+}
+@mixin fondo{
+    background: rgba(45,104,186,1);
+                background: -moz-linear-gradient(top, rgba(45,104,186,1) 0%, rgba(71,148,226,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(45,104,186,1)), color-stop(100%, rgba(71,148,226,1)));
+                background: -webkit-linear-gradient(top, rgba(45,104,186,1) 0%, rgba(71,148,226,1) 100%);
+                background: -o-linear-gradient(top, rgba(45,104,186,1) 0%, rgba(71,148,226,1) 100%);
+                background: -ms-linear-gradient(top, rgba(45,104,186,1) 0%, rgba(71,148,226,1) 100%);
+                background: linear-gradient(to bottom, rgba(45,104,186,1) 0%, rgba(71,148,226,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d68ba', endColorstr='#4794e2', GradientType=0 );
+}
+@mixin titulo-borde{
+    .titulo-border{
+        h3{
+            font-size: 28px;
+            font-weight: 500;
+            border-bottom:3px solid darken($blanco,20);
+            display: inline-block;
+            margin-top: 40px;
+        }
+    }
+}
+@mixin banners{
+    .banners{
+        height: 150px;
+        background-position: 0px -300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 30px 0px;
+        background-attachment: fixed;
+        &-titulo{
+            h2{
+                font-size: 30px;
+                font-weight: 700;
+                color: $blanco;
+            }
+        }
+    }
+}
+/*==================================
+============= END MIXINS ===========
+==================================*/
+
+/*==================================
+=========== STAR BOTONES ===========
+==================================*/
+.btn-transparente{
+    background:transparent;
+    color: $blanco;
+    border-radius: 30px;
+    border: 1.5px solid $blanco;
+    line-height: 33.9px;
+    height: 35px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-top: -2px;
+    &:hover{
+      background:transparent;
+      color: $blanco;
+    }
+}
+.btn-celeste{
+    background:$celeste;
+    font-weight:600;
+    border-radius: 30px;
+    font-family:$roboto;
+    &:hover{
+        background: darken($celeste,3);
+    }
+}
+/*==================================
+============ END BOTONES ===========
+==================================*/
+.card{
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    &:hover{
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    p{
+        a{
+            font-weight: 600;
+        }
+        .descri{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            display: block;
+            margin-top: 5px;
+        }
+    }
+    .card-content {
+        .fecha{
+            border-radius:4px;
+            border:1px solid darken($blanco,20);
+            text-align: center;
+            padding:4px 0px;
+            h5{
+                font-family: $roboto;
+                color: $celeste;
+                font-size: 40px;
+                margin: 0px;
+            }
+            span{
+                font-size: 20px;
+                font-weight: bold;
+                display: block;
+                margin-top: -10px;
+            }
+        }
+        .precio{
+            text-align: center;
+            a{
+                color:$blanco;
+                font-size: 23px;
+                padding: 10px 4px;
+                display: block;
+                font-family: $roboto;
+                font-weight: 400;
+                border-radius: 10px;
+                background:$verde;
+                span{
+                    font-weight: 700;
+                }
+                &.gratis{
+                    letter-spacing: -1px;
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .card-action{
+        ul{
+            margin:0px;
+            li{
+                display: inline-block;
+                border-right: 1px solid #bdbdbd;
+                &:last-child{
+                    border-right:0px solid transparent;
+                }
+                a{
+                    margin-right:0px;
+                    padding: 0px 10px;
+                    i{
+                        color: $celeste;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*==================================
+=========== STAR MODALES ===========
+==================================*/
+.modales{
+    width: 38%;
+    input:focus{
+        border-bottom: 1px solid $celeste !important;
+        box-shadow: 0 1px 0 0 $celeste !important;
+    }
+    input[type=text]:focus:not([readonly])+label{
+        color:$celeste !important;
+    }
+    input[type=email]:focus:not([readonly])+label{
+        color:$celeste !important;
+    }
+    .iniciarSesion{
+        h4{
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 40px;
+        }
+        p{
+            margin-top: 0;
+        }
+    }
+    .link{
+        font-weight: 500;
+        margin-top: 4px;
+        font-size: 18px;
+    }
+    @include redesSociales;
+}
+/*==================================
+============ END MODALES ===========
+==================================*/
+
+/*==================================
+========== STAR BUSCADOR ===========
+==================================*/
+
+.buscadorPlomo::-webkit-input-placeholder { color: $plomo; } /* WebKit */
+.buscadorPlomo:-moz-placeholder { color: $plomo; } /* Firefox 18- */
+.buscadorPlomo::-moz-placeholder { color: $plomo; } /* Firefox 19+ */
+.buscadorPlomo:-ms-input-placeholder { color: $plomo; } /* IE 10+ */
+
+.buscadorBlanco::-webkit-input-placeholder { color: $blanco; } /* WebKit */
+.buscadorBlanco:-moz-placeholder { color: $blanco; } /* Firefox 18- */
+.buscadorBlanco::-moz-placeholder { color: $blanco; } /* Firefox 19+ */
+.buscadorBlanco:-ms-input-placeholder { color: $blanco; } /* IE 10+ */
+
+/*==================================
+=========== END BUSCADOR ===========
+==================================*/
+
+/*===================================
+========= STAR PORQUE CURSANIA ======
+===================================*/
+.porqueCursania{
+    padding-top: 80px;
+    margin-top: 562px;
+    border-bottom:1px solid darken($blanco,15);
+    img{
+        position: relative;
+        bottom: -6px;
+    }
+    @include titulo;
+    &-contenido{
+        .parrafo{
+            font-size: 20px;
+            line-height: 27px;
+        }
+        ul{
+            li{
+                position:relative;
+                margin: 30px 0px;
+                img{
+                    width: 100px;
+                    position:absolute;
+                    top: 4px;
+                }
+                .item{
+                    margin-left: 120px;
+                    h3{
+                        font-size: 27px;
+                        margin: 0;
+                        font-weight: 600;
+                    }
+                    p{
+                        margin-top: 10px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*===================================
+========= END PORQUE CURSANIA =======
+===================================*/
+
+/*===================================
+============= STAR METAS ============
+===================================*/
+.metas{
+    background:lighten($plomo,48);
+    padding: 19px 0px 7px 0px;
+    margin-top: 40px;
+    position: relative;
+    @media (min-width: 645px)  and (max-width: 900px){
+        padding: 17px 0px 1px 0px;
+    }
+    &-img{
+        .ninoEstudiando{
+            @media (max-width: 1000px) {
+                display: none;
+            }
+            width: 372px;
+            position: absolute;
+            left: 60px;
+            top: -63px;
+        }
+    }
+    &-contenido{
+        margin-left: 400px;
+        @media (max-width: 643px) {
+            margin-left: 30px;
+            h3{
+                font-size: 26px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+        @media (min-width: 645px)  and (max-width: 1000px) {
+            margin-left: 50px;
+            h3{
+                font-size: 26px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+        h3{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 25px;
+        }
+    }
+    &-boton{
+        margin:45px 0px;
+        padding: 1rem;
+        text-align: center;
+        @media (max-width: 600px) {
+            margin: 0px;
+        }
+    }
+}
+/*===================================
+============== END METAS ============
+===================================*/
+
+/*===================================
+============ STAR BANNER ============
+===================================*/
+.banner{
+    @media (max-width: 643px) {
+        padding: 50px 0px;
+    }
+    &-contenido{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: $celeste;
+        position: relative;
+        top: -65px;
+        z-index: 112;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        color: $blanco;
+        width: 100%;
+        height: 300px;
+        @media (max-width: 643px) {
+            height: 880px;
+            top: 0;
+            padding: 20px 40px;
+            .item{
+                border-right: none!important;
+                padding: 10px !important;
+            }
+        }
+        .item{
+            flex-grow: 1;
+            width: 300px;
+            height: 300px;
+            border-right: 1px solid rgba(255, 255, 255, 0.67);
+            text-align: center;
+            padding: 20px;
+            &:last-child{
+                border-right: 0;
+            }
+            img{
+                width: 100px;
+            }
+            h4{
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+/*===================================
+============= END BANNER ============
+===================================*/
+
+/*===================================
+============ STAR CURSOS ============
+===================================*/
+.cursos{
+    @include titulo;
+    padding:80px 0px;
+}
+/*===================================
+============= END CURSOS ============
+===================================*/
+/*===================================
+========= STAR SUSCRIPCION ==========
+===================================*/
+.suscripcion{
+    padding:80px 0px;
+    @include titulo;
+    .precio{
+        border-radius: 30px;
+        width:330px;
+        display: inline-block;
+        margin: 20px 15px;
+        padding: 40px 20px;
+        @media (max-width:600px){
+            margin:20px 5px;
+        }
+        &-top{
+            h3{
+                font-weight: bold;
+                margin-top: 0;
+            }
+            .numero{
+                width: 150px;
+                padding: 30px 0px;
+                margin: auto;
+                height: 150px;
+                font-family:$roboto;
+                color: $blanco;
+                border-radius:50%;
+                @include fondo;
+                span{
+                    font-size: 60px;
+                    font-weight: bold;
+                    letter-spacing: -1px;
+                    sup{
+                        font-size: 23px;
+                        top: -28px;
+                    }
+                }
+            }
+        }
+        &-bottom{
+            .item{
+                margin: 26px 0px;
+                li{
+                    padding-top:10px;
+                    text-align: left;
+                    font-weight: 400;
+                    font-size: 15px;
+                    color: $plomo;
+                    .puntos{
+                        @include fondo;
+                        width: 14px;
+                        display: inline-block;
+                        height: 14px;
+                        border-radius:50%;
+                    }
+                }
+            }
+        }
+    }
+    .mas-info{
+        margin-top: 50px;
+        a{
+            font-weight: 400;
+            border-bottom:1px solid $celeste;
+            font-size: 20px;
+        }
+    }
+}
+/*===================================
+========== END SUSCRIPCION ==========
+===================================*/
+
+/*===================================
+============ STAR POST ==============
+===================================*/
+.post{
+    padding:80px 0px;
+    @include titulo;
+    background-color:darken($blanco,5);
+}
+/*===================================
+============= END POST ==============
+===================================*/
+
+/*===================================
+========= STAR TESTIMONIOS ==========
+===================================*/
+.testimonios{
+    padding:80px 0px;
+    .card-panel{
+        padding: 26px;
+    }
+    @include titulo;
+    @include itemTestimonio;
+}
+/*===================================
+========== END TESTIMONIOS ==========
+===================================*/
+
+/*===================================
+=========== STAR FOOTER =============
+===================================*/
+.footer{
+    &-top{
+        padding: 45px 0px;
+        .item{
+            @media (max-width:600px){
+                margin-bottom: 25px;
+            }
+        img{
+            width: 230px;
+            margin-top: 24px;
+
+        }
+        h3{
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: $roboto;
+            margin-bottom:25px;
+        }
+        &-card{
+            p{
+                font-weight: 500;
+                color: $plomo_links;
+            }
+            h5{
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: $roboto;
+                margin-top: 18px;
+            }
+            span{
+                font-weight: 500;
+                color: $plomo_links;
+                a{
+                    font-weight: 400;
+                    font-family: $roboto;
+                    color: $plomo_links;
+                }
+            }
+        }
+        &-lista{
+                li{
+                    padding:6px 0px;
+                    a{
+                        font-weight: 500;
+                        color: $plomo_links;
+                    }
+                }
+            }
+        }
+    }
+    &-copyright{
+        padding:30px 0px;
+    }
+}
+/*===================================
+============ END FOOTER =============
+===================================*/
+
+/*===================================
+========= STAR COMENTARIOS ==========
+===================================*/
+
+.comentarios{
+    padding: 50px 0px;
+    @include item;
+    @include puntaje;
+    &2{
+        margin-left: 40px !important;
+        margin-top: 25px;
+    }
+}
+
+/*===================================
+========== END COMENTARIOS ==========
+===================================*/
+
+/*===================================
+========= STAR CURSOSPAGE ===========
+===================================*/
+
+.cursosPage{
+    padding:50px 0px;
+    &-listado{
+        h3{
+           font-weight: 600;
+           font-size: 30px;
+        }
+        ul{
+            li{
+                border-bottom:1px dotted $negro;
+                padding:10px 0px;
+                position:relative;
+                .puntos{
+                    @include fondo;
+                    width: 14px;
+                    display: inline-block;
+                    height: 14px;
+                    border-radius:50%;
+                    position:absolute;
+                    top: 20px;
+                }
+                a{
+                    margin-left: 25px;
+                    color: $negro;
+                    font-size: 20px;
+                    display: block;
+                    position:relative;
+                    .numero{
+                        position: absolute;
+                        color: $celeste;
+                        font-weight: 500;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*===================================
+========== END CURSOSPAGE ===========
+===================================*/
+
+/*===================================
+========== STAR CURSOITEM ===========
+===================================*/
+
+.cursoItem{
+    .seccion1{
+        margin-top: 50px;
+        @include titulo;
+        .titulo{
+            p{
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+        }
+        &-titulo{
+            font-size: 35px;
+            font-weight: 600;
+        }
+        .Subtitulos{
+            font-size: 25px;
+            font-weight: 600;
+            margin-top:30px;
+        }
+        p{
+            font-size: 17px;
+        }
+        ol{
+            margin-top: 0;
+            padding-left: 17px;
+            li{
+                font-size:17px;
+                color: $plomo;
+            }
+        }
+        .titulo-listado{
+            color: darken($negro,50);
+        }
+        .listado{
+            margin-top: 20px;
+            li{
+                padding: 6px 0px;
+                position:relative;
+                i{
+                    color: $celeste;
+                    position:absolute;
+                    top: 6px;
+                }
+                a{
+                    color: $plomo;
+                    margin-left: 30px;
+                }
+            }
+        }
+        .compartir{
+            position: absolute;
+            top: 19px;
+            left: 140px;
+        }
+        @include redesSociales;
+    }
+    .seccion2{
+        margin-top: 85px;
+        position:relative;
+        .bn-botom{
+            position:fixed;
+            background:$blanco;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.15);
+            left: 0;
+            height: 63px;
+            z-index: 2;
+            padding-top: 14px;
+        }
+        .suscripcion-botones{
+            .raya{
+                font-size: 20px;
+                position:relative;
+                &:before,
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 111px;
+                    height: 1px;
+                    background:#e8e8e8;
+                    bottom: 10px;
+                }
+                &:before{
+                    left: calc(-126px - 0px);
+                }
+                &:after{
+                    left: calc(26px - 0px);
+                }
+            }
+            a{
+                font-size: 20px;
+            }
+        }
+        .categoria{
+            margin-top: 40px;
+            border:1px solid #e8e8e8;
+            margin-bottom:0;
+            li{
+                border-top:1px solid #e8e8e8;
+                padding: 8px 0px;
+                font-size: 17px;
+                position:relative;
+                color: $plomo;
+                &:first-child {
+                    border-top:1px solid transparent;
+                }
+                .letra{
+                    margin-left: 48px;
+                }
+                a{
+                    position:absolute;
+                    right: 24px;
+                    top: 10px;
+                    font-weight:500;
+                    font-size: 15px;
+                }
+                .icono{
+                    position:absolute;
+                    top: 6px;
+                }
+            }
+        }
+        @include titulo-borde;
+        @include puntaje;
+        .tutor{
+            h5{
+                font-weight:700;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+            .btn-transparente{
+              border: 1.4px solid $celeste !important;
+              color: $celeste !important;
+              margin-top: 5px;
+              box-shadow: 0px 0px 0px transparent;
+            }
+        }
+        @include relacionados;
+    }
+}
+/*===================================
+=========== END CURSOITEM ===========
+===================================*/
+
+/*===================================
+=========== END CURSOITEM ===========
+===================================*/
+.postPage{
+    padding:50px 0px;
+    .tutor{
+        position:relative;
+        &-img{
+            position:absolute;
+            width: 140px;
+            top: -30px;
+            z-index: 1;
+            left: 32%;
+        }
+    }
+    .card-content{
+        .nombre{
+            margin-top: 80px;
+            h5{
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+        }
+        p{
+            margin:10px 0px;
+            text-align: justify;
+        }
+        @include redesSociales;
+        .titulo{
+            font-size: 40px;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        .usuarios{
+            .icons{
+                margin-top: 20px;
+                text-align: center;
+                i{
+                    font-size: 40px;
+                    color: $celeste;
+                }
+                span{
+                    color: $plomo;
+                }
+                .etiquetas{
+                    li{
+                        display: inline-block;
+                        padding: 2px 0px;
+                        a{
+                            background-color:lighten($plomo,37);
+                            color: $plomo;
+                            padding:3px 5px;
+                            font-weight: 600;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include titulo-borde;
+    @include relacionados;
+}
+/*===================================
+=========== END CURSOITEM ===========
+===================================*/
+
+/*============================================
+=========== START VARIACIONES MENU ===========
+==============================================*/
+.tiene-sombra.nav-sombra{
+    box-shadow:0px 0px 5px rgba(78, 78, 78, 0.68);
+}
+.nav-tabs{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.nav-tabs-aside{
+    top:112px!important;
+}
+/*==========================================
+=========== END VARIACIONES MENU ===========
+============================================*/
+
+/*============================================
+=========== START CLASES ADICIONALES =========
+==============================================*/
+.mb-45{
+    margin-bottom:45px;
+}
+.mt-45{
+    margin-top:45px;
+}
+.mt-24{
+    margin-top: 24px;
+}
+.mt-10{
+    margin-top:10px;
+}
+.p-15{
+    padding: 15px 0px!important;
+}
+
+.color-plomo{
+  color:$plomo;
+}
+/*==========================================
+=========== END CLASES ADICIONALES =========
+============================================*/
+
+/*==========================================
+================ STAR NOSOTROS =============
+==========================================*/
+.nosotros{
+    &-banner{
+        background-image:url("../../frontend/img/banner/nosotros.jpg");
+    }
+    @include banners;
+    .section-content{
+        padding:80px 0px;
+        @include titulo;
+        .content-icon{
+            border: 1px solid lighten($plomo,40);
+            margin-bottom: 30px;
+            padding:20px;
+            position:relative;
+            h5{
+              font-size: 23px;
+              font-weight: 500;
+            }
+            @media (max-width: 600px){
+              &.right{
+                text-align: left !important;
+              }
+            }
+            &.right{
+              text-align: right;
+            }
+            &.left{
+              text-align: left;
+            }
+            .icon-bx-md{
+                position: absolute;
+                top: auto;
+                padding: 9px;
+                width: 100px;
+                text-align: center;
+                line-height: 100px;
+                height: 100px;
+                border-radius:50%;
+                @media (max-width: 600px){
+                  display: none;
+                }
+                &.right{
+                  right: 0;
+                  -webkit-transform: translateX(50%);
+                  -ms-transform: translateX(50%);
+                  transform: translateX(50%);
+                }
+                &.left{
+                  left: 0;
+                  -webkit-transform: translateX(-50%);
+                  -ms-transform: translateX(-50%);
+                  transform: translateX(-50%);
+                }
+                i{
+                    font-size: 45px;
+                    color: $blanco;
+                }
+            }
+            .icon-content{
+              &.right{
+                padding-right: 40px;
+              }
+              &.left{
+                @media (max-width: 600px){
+                  padding-left: 0px!important;
+                }
+                padding-left: 40px;
+              }
+            }
+        }
+    }
+    .ventajas{
+      padding: 80px 0px;
+      background: $celeste;
+      color: $blanco;
+      .titulo{
+        h2{
+          color: $blanco !important;
+        }
+        p{
+          color: $blanco;
+        }
+      }
+      @include titulo;
+      &-item{
+        border: 1px solid $blanco;
+        padding: 20px;
+        margin: 30px 0px;
+        .imagen{
+          text-align: center;
+          img{
+            width: 100px;
+          }
+        }
+       .contenido{
+         h5{
+           font-weight: 600;
+         }
+         p{
+           color: $blanco;
+         }
+       }
+      }
+    }
+}
+
+/*==========================================
+================= END NOSOTROS =============
+==========================================*/
+
+
+/*==========================================
+================= STAR FAQ =============
+==========================================*/
+.faq{
+  &-banner{
+      background-image:url("../../frontend/img/banner/faq.jpeg");
+  }
+   @include banners;
+   .section-content{
+       padding:80px 0px;
+       @include titulo;
+   }
+}
+
+/*===================================================
+================= STAR PRE VENTA VIDEOS =============
+=====================================================*/
+.pre-container{
+  .pre-tiempo{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    &::after{
+      content: " ";
+      width: 120%;
+      height: 132%;
+      background: rgba(0, 0, 0, 0.78);
+      display: block;
+      position: absolute;
+      top: -29px;
+      right: -68px;
+      transform: rotate(19deg);
+    }
+    /*background: rgba(0, 0, 0, 0.62);*/
+    .pre-texto{
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      margin-top: 90px;
+      h3{
+        color: $blanco;
+        font-weight: 600;
+      }
+      p{
+        color: $blanco;
+        font-size: 18px;
+        margin-top: -15px;
+      }
+    }
+  }
+  .pre-contador{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    ul#tiempo_restante{
+      margin:auto;
+      li{
+        color:$blanco;
+        display: inline-block;
+        margin-right: 15px;
+        h3{
+          font-family: $roboto;
+        }
+        span{
+          display: block;
+          margin-top: -15px;
+        }
+      }
+    }
+  }
+  .pre-cta{
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.cta-btn{
+  padding: 6px 15px;
+  border: 1px solid white;
+  color: white;
+  transition: 500ms;
+}
+.cta-btn:hover{
+  background: rgba(0, 0, 0, 0.90);
+}
+
+#detallecurso{
+  position: absolute;
+  bottom: -35px;
+}

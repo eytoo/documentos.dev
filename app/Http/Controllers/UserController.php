@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Country;
-use App\Profesor;
 use App\User;
 use App\Userl;
 use Illuminate\Http\Request;
@@ -59,10 +58,10 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'nombre'     => 'required|max:200',
-            'apellidos'  => 'required',
-            'user_email' => $request->has("id") ? 'required' : 'required|unique:users',
-            'modo'       => 'required',
+            'nombre'    => 'required|max:200',
+            'apellidos' => 'required',
+            'email'     => $request->has("id") ? 'required' : 'required|unique:users',
+            'modo'      => 'required',
         ]);
         if ($validator->fails()) {
             return response()->json(array(
@@ -78,8 +77,8 @@ class UserController extends Controller
 
         $object->user_nombre     = $request->input("nombre");
         $object->user_apellidos  = $request->input("apellidos");
-        $object->user_email      = $request->input("user_email");
-        $object->user_password   = Hash::make($request->input("password"));
+        $object->email           = $request->input("email");
+        $object->password        = Hash::make($request->input("password"));
         $object->user_reg_modo   = $request->input("modo");
         $object->user_confirmado = $request->input("estado");
         $object->user_country_id = $request->input("pais");
@@ -121,7 +120,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $object                  = Userl::withTrashed()->where("user_id", $id)->first();
+        $object                  = Userl::withTrashed()->where("id", $id)->first();
         $this->data["object"]    = $object;
         $this->data["countries"] = Country::all();
         return view("admin." . str_slug($this->data["entity_p"]) . ".create")->with($this->data);
@@ -140,7 +139,8 @@ class UserController extends Controller
         if ($request->has("type")) {
             $type = $request->input("type");
         }
-        $object = Profesor::withTrashed()->where("prof_id", $id)->first();
+
+        $object = Userl::withTrashed()->where("id", $id)->first();
         if ($object) {
 
             if ($type == "software") {

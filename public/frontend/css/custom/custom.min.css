@@ -1,0 +1,15 @@
+body
+{
+    cursor: default
+}
+
+span.ql-size-large {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+#hearts {color: #4794e2;font-size: 25px!important;}
+#hearts-existing { color: #ee8b2d;}
+.fecha-publicacion{
+  font-weight: 500;
+  font-size: 14px;
+}

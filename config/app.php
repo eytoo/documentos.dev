@@ -180,6 +180,7 @@ return [
         //Paquetes agregados
         Zizaco\Entrust\EntrustServiceProvider::class,
         Webpatser\Countries\CountriesServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -232,6 +233,7 @@ return [
         //New providers
         'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
         'Countries'    => Webpatser\Countries\CountriesFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

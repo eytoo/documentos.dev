@@ -59,6 +59,18 @@ enctype="multipart/form-data"
                         </select>
                     </div>
                 </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label" for="ent_2">Profesor</label>
+                        <select name="profesor" required id="ent_2" class="form-control select2">
+                            <option value=""> -- Selecciona -- </option>
+                                @forelse($profesores as $p)
+                                    <option {{ isset($object) && $object->prof_id == $p->prof_id ? 'selected' : '' }} value="{{$p->prof_id}}">{{ $p->prof_nombre }}</option>
+                                @empty
+                                @endforelse
+                        </select>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label" for="ent_3">Estado</label>
@@ -116,12 +128,28 @@ enctype="multipart/form-data"
                     @if(isset($object))
                         {{$object->cur_descripcion}}
                     @else
-                        <h4>A quienes esta dirigido:</h4>
-                        <p>Detalla aquí a quienes esta dirigido tu curso</p>
-                        <h4>Requisitos para el curso:</h4>
-                        <p>Que necesita el usuario para poder llevar el curso</p>
-                        <h4>Que aprenderá en este curso:</h4>
-                        <p>Lista de las cosas más importantes que aprenderá en el curso</p>
+                        <h3 class="Subtitulos">Detalles del Curso</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla
+                        </p>
+                        <h3 class="Subtitulos">Dirido a:</h3>
+                        <ol>
+                            <li> Diseñadores Web</li>
+                            <li> Gente con conocimientos de Web</li>
+                            <li> Programadores Web</li>
+                            <li> Diseñadores Gráficos</li>
+                        </ol>
+                        <h3 class="Subtitulos">Requisitos</h3>
+                        <ol>
+                            <li> Tener conocimientos de Diseño Web</li>
+                            <li> Nociones de programación Básica</li>
+                        </ol>
+                        <h3 class="Subtitulos">¿Qué aprenderás?</h3>
+                        <ol class="col s12">
+                            <li> Realizar Login y Registro</li>
+                            <li> Registro de usuarios con PHP</li>
+                            <li> Manejo de conexiòn por Ajax</li>
+                            <li> Diseño del formulario con Bootstrap</li>
+                        </ol>
                     @endif
                 </textarea>
             </div>
@@ -135,7 +163,40 @@ enctype="multipart/form-data"
                 <label for="portada">Portada del Curso</label>
                 <input name="portada" type="file" id="portada" class="dropify" data-default-file="{{ isset($object) ? url('imagenes/'.$object->cur_portada) : "Portada del curso" }}" />
             </div>
+            <div class="form-group">
+                <label for="color">Color</label>
+                <input value="{{ isset($object)?$object->cur_color:'' }}" type="text" class="form-control colorpicker colorpicker-element" id="color" required name="color" placeholder="Color hexadecimal: #000">
+            </div>
         </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+          <legend>Información de pago</legend>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label class="control-label" for="ent_10">En preventa</label>
+                      <select name="en_preventa" required id="ent_10" class="form-control select2">
+                          <option value=""> -- Selecciona -- </option>
+                          <option {{ isset($object) && $object->en_preventa == 1 ? 'selected' : '' }} value="1">Si</option>
+                          <option {{ isset($object) && $object->en_preventa == 0 ? 'selected' : '' }} value="0">No</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label class="control-label" for="ent_12">Videos</label>
+                      <input value="{{ isset($object)?$object->pre_videos:'' }}" name="pre_videos" required type="number" class="form-control" />
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label class="control-label" for="ent_11">Fecha *</label>
+                      <input value="{{ isset($object)?date('Y-m-d',strtotime($object->pre_fecha)):'' }}" name="pre_fecha" required type="date" class="form-control" />
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
 	<!--<div class="form-group">
 		<label for="username">Details</label>

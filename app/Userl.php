@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Userl extends Model
 {
     protected $table      = "users";
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'id';
     use SoftDeletes;
     protected $fillable = [
         'name', 'email', 'password',

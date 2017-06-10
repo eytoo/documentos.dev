@@ -37,7 +37,30 @@ Route::get("check/admin", function () {
 });
 
 Route::group(['domain' => 'cursania.dev'], function () {
-    Route::get('/', 'Front\IndexController@getIndex');
+    Route::group(["middleware" => "web"], function () {
+        Route::get('{provider}/authorize', 'Front\AuthController@authorise');
+        Route::get('{provider}/login', 'Front\AuthController@socialLogin');
+        //Home
+        Route::get('/', 'Front\IndexController@getIndex');
+        Route::get('welcome', 'Front\IndexController@getIndexLogin')->middleware("auth.client");
+
+        Route::get('curso/{url}', 'Front\CursoController@getCurso')->name("curso");
+        Route::get('post/{url}', 'Front\BlogController@getPost');
+        Route::get('nosotros', 'Front\IndexController@getNosotros');
+        Route::get('faq', 'Front\IndexController@getFaq');
+
+        // Autentificación
+        Route::post('auth/dologin', 'Front\AuthController@login');
+        Route::post('auth/doregister', 'Front\AuthController@registro');
+        Route::get('auth/logout', 'Front\AuthController@logout');
+
+        // Comentario
+        Route::get('comentario/formulario/{tipo}/{cont_id}/{cont_url}', 'Front\ComentarioController@getFormComnetario');
+        Route::get('comentario/publicar', 'Front\ComentarioController@postComentario')->middleware("auth.client");
+        Route::post('comentario/public', 'Front\ComentarioController@postComentario')->middleware("auth.client");
+        Route::get('cur/redir', 'Front\ComentarioController@getRedireccionar')->middleware("auth.client");
+    });
+
 });
 
 /**
@@ -103,11 +126,15 @@ Route::group(['domain' => 'team.cursania.dev'], function () {
         Route::resource('profesores', 'ProfesorController');
         Route::resource('temas', 'TemaController');
         Route::resource('lecciones', 'LeccionController');
+        Route::get('vimeo/validar', 'LeccionController@validar');
 
         // Blog
         Route::resource('postcategorias', 'PostCategoriaController');
         Route::resource('entradas', 'PostController');
         Route::post('post/uploadImage', 'PostController@uploadImage');
+
+        //Planes
+        Route::resource('plan', 'PlanController');
     });
 });
 
