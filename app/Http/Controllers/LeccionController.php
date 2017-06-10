@@ -78,7 +78,7 @@ class LeccionController extends Controller {
   public function create()
   {
       $lib = new \Vimeo\Vimeo(Config::get("services.vimeo.client_id"),Config::get("services.vimeo.client_secret"), Session::get('vimeo_access_token'));
-      $videos = $lib->request('/me/videos');
+      $videos = $lib->request('/me/videos',array("per_page"=>100));
 
       $this->data["videos"] = $videos["body"]["data"];
       return view("admin." . str_slug($this->data["entity_p"]) . ".create")->with($this->data);
@@ -148,7 +148,7 @@ class LeccionController extends Controller {
   public function edit($id)
   {
       $lib = new \Vimeo\Vimeo(Config::get("services.vimeo.client_id"),Config::get("services.vimeo.client_secret"), Session::get('vimeo_access_token'));
-      $videos = $lib->request('/me/videos');
+      $videos = $lib->request('/me/videos',array("per_page"=>100));
 
       $this->data["videos"] = $videos["body"]["data"];
       $object               = Leccion::withTrashed()->where("lec_id", $id)->where("tema_id", session("tema_id"))->first();

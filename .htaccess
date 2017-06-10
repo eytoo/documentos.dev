@@ -17,4 +17,11 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Check that you're on port 443 and the hostname starts with www
+    RewriteCond %{SERVER_PORT} ^443
+    RewriteCond %{HTTP_HOST} ^www\.
+
+    # Redirect to domain without the www
+    RewriteRule (.*) https://cursania.com$1 [L,R,QSA]
 </IfModule>

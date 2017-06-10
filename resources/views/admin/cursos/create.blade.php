@@ -131,7 +131,7 @@ enctype="multipart/form-data"
                         <h3 class="Subtitulos">Detalles del Curso</h3>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla
                         </p>
-                        <h3 class="Subtitulos">Dirido a:</h3>
+                        <h3 class="Subtitulos">Dirigído a:</h3>
                         <ol>
                             <li> Diseñadores Web</li>
                             <li> Gente con conocimientos de Web</li>
@@ -192,7 +192,7 @@ enctype="multipart/form-data"
               <div class="col-md-6">
                   <div class="form-group">
                       <label class="control-label" for="ent_11">Fecha *</label>
-                      <input value="{{ isset($object)?date('Y-m-d',strtotime($object->pre_fecha)):'' }}" name="pre_fecha" required type="date" class="form-control" />
+                      <input value="{{ isset($object) && !is_null($object->pre_fecha) ?date('Y-m-d',strtotime($object->pre_fecha)):'' }}" name="pre_fecha" required type="date" class="form-control" />
                   </div>
               </div>
           </div>
@@ -205,18 +205,18 @@ enctype="multipart/form-data"
 @stop
 
 @section("js")
-	<script src="/plugins/dropify/dist/js/dropify.min.js"></script>
-    <script src="/robust-assets/js/plugins/editors/summernote/summernote.js" type="text/javascript"></script>
+	<script src="/public/admin/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script src="/public/admin/robust-assets/js/plugins/editors/summernote/summernote.js" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
             $('.dropify').dropify();
             $(".summernote").summernote();
         });
     </script>
-    <script src="/robust-assets/js/plugins/forms/tags/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-    <script src="/robust-assets/js/plugins/forms/tags/tagging.min.js" type="text/javascript"></script>
-    <script src="/robust-assets/js/plugins/forms/tags/tagging.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/tags/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/tags/tagging.min.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/tags/tagging.js" type="text/javascript"></script>
     <!--Input Mask-->
-    <script src="/robust-assets/js/plugins/forms/extended/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
-    <script src="/robust-assets/js/components/forms/extended/form-inputmask.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/extended/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/components/forms/extended/form-inputmask.js" type="text/javascript"></script>
 @stop

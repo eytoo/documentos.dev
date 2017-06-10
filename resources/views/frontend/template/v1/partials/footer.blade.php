@@ -5,7 +5,7 @@
             <div class="row">
                <div class="col l3 s12 m6">
                     <div class="item">
-                        <img src="/frontend/img/logo.svg" class="responsive-img" alt="">
+                        <img src="/public/frontend/img/logo.svg" class="responsive-img" alt="">
                         <div class="item-card">
                             <p>Aprender en línea nunca fue tan fácil, mejora tus habilidades con nuestros cursos.</p>
                         </div>

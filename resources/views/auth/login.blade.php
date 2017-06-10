@@ -11,33 +11,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="author" content="DacDevs">
-    <title>Team Cursania | Login</title>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png?v=2">
+    <title>Administración Cursania | Login</title>
+    <link rel="shortcut icon" type="image/png" href="/public/favicon.png?v=2">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" href="/robust-assets/css/vendors.min.css"/>
+    <link rel="stylesheet" href="/public/admin/robust-assets/css/vendors.min.css"/>
     <!-- BEGIN VENDOR CSS-->
     <!-- BEGIN Font icons-->
-    <link rel="stylesheet" type="text/css" href="/robust-assets/fonts/icomoon.css">
-    <link rel="stylesheet" type="text/css" href="/robust-assets/fonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/admin/robust-assets/fonts/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="/public/admin/robust-assets/fonts/flag-icon-css/css/flag-icon.min.css">
     <!-- END Font icons-->
     <!-- BEGIN Plugins CSS-->
-    <link rel="stylesheet" type="text/css" href="/robust-assets/css/plugins/sliders/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/public/admin/robust-assets/css/plugins/sliders/slick/slick.css">
     <!-- END Plugins CSS-->
-    
+
     <!-- BEGIN Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="/robust-assets/css/plugins/forms/icheck/icheck.css">
-    <link rel="stylesheet" type="text/css" href="/robust-assets/css/plugins/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="/public/admin/robust-assets/css/plugins/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="/public/admin/robust-assets/css/plugins/forms/icheck/custom.css">
     <!-- END Vendor CSS-->
     <!-- BEGIN ROBUST CSS-->
-    <link rel="stylesheet" href="/robust-assets/css/app.min.css"/>
+    <link rel="stylesheet" href="/public/admin/robust-assets/css/app.min.css"/>
     <!-- END ROBUST CSS-->
     <!-- BEGIN Page Level CSS-->
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/admin/assets/css/style.css">
     <!-- END Custom CSS-->
 </head>
 <body data-open="click" data-menu="vertical-content-menu" data-col="1-column" class="vertical-layout vertical-content-menu 1-column  blank-page blank-page">
@@ -55,7 +55,7 @@
             <div class="card border-grey border-lighten-3 m-0">
                 <div class="card-header no-border">
                     <div class="card-title text-xs-center">
-                        <div class="p-1"><img style="width: 250px;" src="/img/cursania.svg" alt="branding logo"></div>
+                        <div class="p-1"><img style="width: 250px;" src="/public/admin/img/cursania.svg" alt="branding logo"></div>
                     </div>
                     <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2"><span>Inicia sesión con tu cuenta</span></h6>
                 </div>
@@ -114,18 +114,18 @@
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 
 <!-- BEGIN VENDOR JS-->
-<script src="/robust-assets/js/vendors.min.js"></script>
+<script src="/public/admin/robust-assets/js/vendors.min.js"></script>
 <!-- BEGIN VENDOR JS-->
 <!-- BEGIN PAGE VENDOR JS-->
-<script src="/robust-assets/js/plugins/ui/headroom.min.js" type="text/javascript"></script>
-<script src="/robust-assets/js/plugins/forms/icheck/icheck.min.js" type="text/javascript"></script>
-<script src="/robust-assets/js/plugins/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
+<script src="/public/admin/robust-assets/js/plugins/ui/headroom.min.js" type="text/javascript"></script>
+<script src="/public/admin/robust-assets/js/plugins/forms/icheck/icheck.min.js" type="text/javascript"></script>
+<script src="/public/admin/robust-assets/js/plugins/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
 <!-- END PAGE VENDOR JS-->
 <!-- BEGIN ROBUST JS-->
-<script src="/robust-assets/js/app.min.js"></script>
+<script src="/public/admin/robust-assets/js/app.min.js"></script>
 <!-- END ROBUST JS-->
 <!-- BEGIN PAGE LEVEL JS-->
-<script src="/robust-assets/js/components/forms/form-login-register.js" type="text/javascript"></script>
+<script src="/public/admin/robust-assets/js/components/forms/form-login-register.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
 </body>
 </html>

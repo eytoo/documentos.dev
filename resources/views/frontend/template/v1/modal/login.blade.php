@@ -33,8 +33,8 @@
                             <a href="">Olvide mi contraseña</a><br>
                             <hr>
                             <span>Inicia con tu Red Social</span> <br><br>
-                            <a href="" class="waves-effect waves-light btn indigo darken-3">Facebook</a>
-                            <a href="" class="waves-effect waves-light btn red darken-4">Google +</a>
+                            <a href="#" class="waves-effect waves-light btn indigo darken-3">Facebook</a>
+                            <a href="#" class="waves-effect waves-light btn red darken-4">Google +</a>
                         </div>
                     </div>
                 </form>

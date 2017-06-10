@@ -3,10 +3,10 @@
     <header id="header" class="page-topbar">
         <!-- start header nav-->
         <div class="navbar-fixed">
-            <nav class="navbar-color {{ isset($tiene_sombra) && $tiene_sombra == true ? 'tiene-sombra' : '' }} navegador  {{ isset($sombra_cero) ? 'nav-sombra' : '' }}" @yield("menu_vars")>
+            <nav class="navbar-color {{ isset($tiene_sombra) && $tiene_sombra == true ? 'tiene-sombra' : '' }} navegador {{isset($white_menu) ? 'nav-fondo-color':''}}  {{ isset($sombra_cero) ? 'nav-sombra' : '' }}" @yield("menu_vars")>
                 <div class="nav-wrapper">
                     <ul class="left">
-                      <li><h1 class="logo-wrapper"><a href="{{ url('/') }}" class="brand-logo darken-1"><img src="{{ isset($logo) && $logo == 'bn' ? "/frontend/img/logo-bn.svg" : "/frontend/img/logo.svg" }}" alt="Cursania logo"></a> <span class="logo-text">Cursania</span></h1></li>
+                      <li><h1 class="logo-wrapper"><a href="{{ url('/') }}" class="brand-logo darken-1"><img src="{{ isset($logo) && $logo == 'bn' ? "/public/frontend/img/logo-bn.svg" : "/public/frontend/img/logo.svg" }}" alt="Cursania logo"></a> <span class="logo-text">Cursania</span></h1></li>
                     </ul>
                     <div class="header-search-wrapper hide-on-med-and-down buscadorContent">
                         <i class="mdi-action-search icono-buscador {{ isset($white_menu)?'blanco':'plomo' }}"></i>

@@ -6,8 +6,8 @@ $sombra_cero = true;
 ?>
 
 @section('estilos')
-  <link rel="stylesheet" type="text/css" href="/robust-assets/css/plugins/editors/quill/monokai-sublime.min.css">
-  <link rel="stylesheet" type="text/css" href="/frontend/css/custom/quill.snow.custom.css">
+  <link rel="stylesheet" type="text/css" href="/public/admin/robust-assets/css/plugins/editors/quill/monokai-sublime.min.css">
+  <link rel="stylesheet" type="text/css" href="/public/frontend/css/custom/quill.snow.custom.css">
 @endsection
 
 @section('main')

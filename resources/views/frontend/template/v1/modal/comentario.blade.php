@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/frontend/plugins/stars/stars.js"></script>
+<script type="text/javascript" src="/public/frontend/plugins/stars/stars.js"></script>
 <script>
   $(document).ready(function() {
     formSend();

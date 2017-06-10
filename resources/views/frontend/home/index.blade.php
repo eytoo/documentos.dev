@@ -12,7 +12,7 @@ $tiene_sombra = true;
                 <div class="container">
                     <div class="row" style="margin-bottom: 0">
                         <div class="col l6 hide-on-med-and-down">
-                            <img src="/frontend/img/porqueCursania.png" class="responsive-img" alt="">
+                            <img src="/public/frontend/img/porqueCursania.png" class="responsive-img" alt="">
                         </div>
                         <div class="col l5 m8 offset-m2 s10 offset-s1">
                             <div class="titulo">
@@ -22,14 +22,14 @@ $tiene_sombra = true;
                                 <p class="parrafo">Tenemos materiales de mucha utilidad preparados en videos de alta calidad. Cada curso esta trabajado a medida por nosotros, siempre pensando en que estos mejoren tus habilidades.</p>
                                 <ul>
                                     <li>
-                                        <img src="/frontend/img/icono/icon-diamante.svg" alt="">
+                                        <img src="/public/frontend/img/icono/icon-diamante.svg" alt="">
                                         <div class="item">
                                             <h3>Premium o Pago único</h3>
                                             <p>En Cursania pordrás obtener un solo curso para toda la vida o tambien podras acceder a todos comprando una suscripción.</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <img src="/frontend/img/icono/icon-computadora.svg" alt="">
+                                        <img src="/public/frontend/img/icono/icon-computadora.svg" alt="">
                                         <div class="item">
                                             <h3>Tecnologías actuales</h3>
                                             <p>Tendremos siempre actualizada nuestra biblioteca de cursos con las tecnologías al día de hoy.</p>
@@ -42,7 +42,7 @@ $tiene_sombra = true;
                             </div>
                         </div>
                         <div class="col m8 offset-m2 s12 hide-on-large-only">
-                            <img src="/frontend/img/porqueCursania.png" class="responsive-img" alt="">
+                            <img src="/public/frontend/img/porqueCursania.png" class="responsive-img" alt="">
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ $tiene_sombra = true;
                     <div class="row">
                         <div class="col l9 s12 m8">
                            <div class="metas-img">
-                               <img src="/frontend/img/home_nino.svg" class="responsive-img ninoEstudiando" alt="">
+                               <img src="/public/frontend/img/home_nino.svg" class="responsive-img ninoEstudiando" alt="">
                            </div>
                             <div class="metas-contenido">
                                 <h3>Tú pones tus metas</h3>
@@ -213,7 +213,7 @@ $tiene_sombra = true;
                         <div class="col l5 offset-l1">
                             <div class="card-panel">
                                 <div class="items">
-                                    <img src="/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
+                                    <img src="/public/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
                                     <div class="nombre">
                                         <h4>Cesar Mejia</h4>
                                         <span>Suscriptor</span>
@@ -225,7 +225,7 @@ $tiene_sombra = true;
                         <div class="col l5 ">
                             <div class="card-panel">
                                 <div class="items">
-                                    <img src="/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
+                                    <img src="/public/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
                                     <div class="nombre">
                                         <h4>Cesar Mejia</h4>
                                         <span>Suscriptor</span>
@@ -237,7 +237,7 @@ $tiene_sombra = true;
                         <div class="col l5 offset-l1">
                             <div class="card-panel">
                                 <div class="items">
-                                    <img src="/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
+                                    <img src="/public/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
                                     <div class="nombre">
                                         <h4>Cesar Mejia</h4>
                                         <span>Suscriptor</span>
@@ -249,7 +249,7 @@ $tiene_sombra = true;
                         <div class="col l5 ">
                             <div class="card-panel">
                                 <div class="items">
-                                    <img src="/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
+                                    <img src="/public/frontend/img/img-circle.jpeg" class="circle responsive-img " alt="Contact Person">
                                     <div class="nombre">
                                         <h4>Cesar Mejia</h4>
                                         <span>Suscriptor</span>
@@ -353,7 +353,7 @@ $tiene_sombra = true;
                             <div class="collapsible-header red white-text"><i class="mdi-action-stars"></i>Favorite Associates</div>
                             <div class="collapsible-body favorite-associates">
                                 <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="/frontend/img/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
+                                    <div class="col s4"><img src="/public/frontend/img/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
                                     </div>
                                     <div class="col s8">
                                         <p>Eileen Sideways</p>
@@ -361,7 +361,7 @@ $tiene_sombra = true;
                                     </div>
                                 </div>
                                 <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="/frontend/img/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
+                                    <div class="col s4"><img src="/public/frontend/img/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
                                     </div>
                                     <div class="col s8">
                                         <p>Zaham Sindil</p>
@@ -369,7 +369,7 @@ $tiene_sombra = true;
                                     </div>
                                 </div>
                                 <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="/frontend/img/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
+                                    <div class="col s4"><img src="/public/frontend/img/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
                                     </div>
                                     <div class="col s8">
                                         <p>Renov Leongal</p>
@@ -377,7 +377,7 @@ $tiene_sombra = true;
                                     </div>
                                 </div>
                                 <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="/frontend/img/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
+                                    <div class="col s4"><img src="/public/frontend/img/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
                                     </div>
                                     <div class="col s8">
                                         <p>Weno Carasbong</p>
@@ -385,7 +385,7 @@ $tiene_sombra = true;
                                     </div>
                                 </div>
                                 <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="/frontend/img/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
+                                    <div class="col s4"><img src="/public/frontend/img/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
                                     </div>
                                     <div class="col s8">
                                         <p>Nusja Nawancali</p>
@@ -406,11 +406,11 @@ $tiene_sombra = true;
 
 @section('script')
     <!-- slider-->
-    <script src="/frontend/slider-responsive/js/jquery.easing-1.3.pack.js"></script>
-    <script src="/frontend/slider-responsive/js/jquery.mobile.just-touch.js"></script>
-    <script src="/frontend/slider-responsive/js/mightyslider.min.js"></script>
-    <script src="/frontend/slider-responsive/js/retina.js" type="text/javascript"></script>
-    <script src="/frontend/slider-responsive/js/jquery.stellar.js" type="text/javascript"></script>
-    <script src="/frontend/slider-responsive/js/tweenlite.js" type="text/javascript"></script>
-    <script src="/frontend/js/index.init.js" type="text/javascript"></script>
+    <script src="/public/frontend/slider-responsive/js/jquery.easing-1.3.pack.js"></script>
+    <script src="/public/frontend/slider-responsive/js/jquery.mobile.just-touch.js"></script>
+    <script src="/public/frontend/slider-responsive/js/mightyslider.min.js"></script>
+    <script src="/public/frontend/slider-responsive/js/retina.js" type="text/javascript"></script>
+    <script src="/public/frontend/slider-responsive/js/jquery.stellar.js" type="text/javascript"></script>
+    <script src="/public/frontend/slider-responsive/js/tweenlite.js" type="text/javascript"></script>
+    <script src="/public/frontend/js/index.init.js" type="text/javascript"></script>
 @endsection

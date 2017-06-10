@@ -93,8 +93,8 @@ enctype="multipart/form-data"
 @stop
 
 @section("js")
-	<script src="/plugins/dropify/dist/js/dropify.min.js"></script>
-    <script src="/robust-assets/js/plugins/editors/summernote/summernote.js" type="text/javascript"></script>
+	<script src="/public/admin/plugins/dropify/dist/js/dropify.min.js"></script>
+    <script src="/public/admin/robust-assets/js/plugins/editors/summernote/summernote.js" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
             $('.dropify').dropify();
@@ -104,12 +104,12 @@ enctype="multipart/form-data"
             @endif
         });
     </script>
-    <script src="/robust-assets/js/plugins/forms/tags/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-    <script src="/robust-assets/js/plugins/forms/tags/tagging.min.js" type="text/javascript"></script>
-    <script src="/robust-assets/js/plugins/forms/tags/tagging.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/tags/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/tags/tagging.min.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/tags/tagging.js" type="text/javascript"></script>
     <!--Input Mask-->
-    <script src="/robust-assets/js/plugins/forms/extended/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
-    <script src="/robust-assets/js/components/forms/extended/form-inputmask.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/plugins/forms/extended/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+    <script src="/public/admin/robust-assets/js/components/forms/extended/form-inputmask.js" type="text/javascript"></script>
 @stop
 
 @section('modal-left-buttons')

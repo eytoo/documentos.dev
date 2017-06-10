@@ -3,8 +3,8 @@
     formSend();
 </script>
 @endif
-<script src="/robust-assets/js/plugins/buttons/spin.min.js" type="text/javascript"></script>
-<script src="/robust-assets/js/plugins/buttons/ladda.jquery.min.js" type="text/javascript"></script>
+<script src="/public/admin/robust-assets/js/plugins/buttons/spin.min.js" type="text/javascript"></script>
+<script src="/public/admin/robust-assets/js/plugins/buttons/ladda.jquery.min.js" type="text/javascript"></script>
 <script>
     $(document).ready(function () {
         $(".select2").select2();

@@ -3,13 +3,13 @@
     <li class="col-md-2">
       <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="icon-paper"></i> News</h6>
       <div id="mega-menu-carousel-example" class="responsive-slick">
-        <div><img src="robust-assets/images/slider/slider-2.png" alt="First slide" class="rounded img-fluid mb-1"><a href="#" class="news-title mb-0">Poster Frame PSD</a>
+        <div><img src="/public/admin/robust-assets/images/slider/slider-2.png" alt="First slide" class="rounded img-fluid mb-1"><a href="#" class="news-title mb-0">Poster Frame PSD</a>
           <p class="news-content"><span class="font-small-2">January 26, 2016</span></p>
         </div>
-        <div><img src="robust-assets/images/slider/slider-5.png" alt="First slide" class="rounded img-fluid mb-1"><a href="#" class="news-title mt-1 mb-0">Header MockUp</a>
+        <div><img src="/public/admin/robust-assets/images/slider/slider-5.png" alt="First slide" class="rounded img-fluid mb-1"><a href="#" class="news-title mt-1 mb-0">Header MockUp</a>
           <p class="news-content"><span class="font-small-2">January 15, 2016</span></p>
         </div>
-        <div><img src="robust-assets/images/slider/slider-6.png" alt="First slide" class="rounded img-fluid mb-1"><a href="#" class="news-title mt-1 mb-0">2 Poster PSD</a>
+        <div><img src="/public/admin/robust-assets/images/slider/slider-6.png" alt="First slide" class="rounded img-fluid mb-1"><a href="#" class="news-title mt-1 mb-0">2 Poster PSD</a>
           <p class="news-content"><span class="font-small-2">January 15, 2016</span></p>
         </div>
       </div>

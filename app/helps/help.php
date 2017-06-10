@@ -43,10 +43,10 @@ function formatMon($monto)
     $moneda_def = "USD";
     switch ($moneda_def) {
         case 'PEN':
-            return "<strong>S/</strong> " . $monto;
+            return "<strong>S/</strong> " . number_format($monto,0);
             break;
         default:
-            return "$" . $monto;
+            return "$" . number_format($monto,0);
             break;
     }
 }

@@ -5,7 +5,7 @@
 @stop
 
 @section("styles")
-<link rel="stylesheet" href="/plugins/dropify/dist/css/dropify.min.css">
+<link rel="stylesheet" href="/public/admin/plugins/dropify/dist/css/dropify.min.css">
 @stop
 
 @section("action-cta")
