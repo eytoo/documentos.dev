@@ -38,7 +38,7 @@ return [
     |
      */
 
-    'debug'           => 'false',
+    'debug'           => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -233,7 +233,7 @@ return [
         //New providers
         'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
         'Countries'    => Webpatser\Countries\CountriesFacade::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

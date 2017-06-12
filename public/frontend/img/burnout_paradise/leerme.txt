@@ -1,0 +1,10 @@
+copiar el archivo profile.BurnoutParadiseSave
+
+direccion de la carpeta en Windows XP:
+%homepath%\Local Settings\Application Data\Criterion Games\Burnout Paradise\Save
+
+direccion de la carpeta en Windows 7:
+%homepath%\AppData\Local\Criterion Games\Burnout Paradise\Save
+
+
+

@@ -4,10 +4,13 @@
 $tiene_sombra = true;
 ?>
 
+@section('menu_add')
+    @include("frontend.template.v1.partials.slider")
+@endsection
+
 @section('main')
         <!-- START WRAPPER -->
         <div class="wrapper">
-            @include("frontend.template.v1.partials.slider")
             <section class="porqueCursania">
                 <div class="container">
                     <div class="row" style="margin-bottom: 0">
@@ -404,13 +407,3 @@ $tiene_sombra = true;
         <!-- END WRAPPER -->
 @endsection
 
-@section('script')
-    <!-- slider-->
-    <script src="/public/frontend/slider-responsive/js/jquery.easing-1.3.pack.js"></script>
-    <script src="/public/frontend/slider-responsive/js/jquery.mobile.just-touch.js"></script>
-    <script src="/public/frontend/slider-responsive/js/mightyslider.min.js"></script>
-    <script src="/public/frontend/slider-responsive/js/retina.js" type="text/javascript"></script>
-    <script src="/public/frontend/slider-responsive/js/jquery.stellar.js" type="text/javascript"></script>
-    <script src="/public/frontend/slider-responsive/js/tweenlite.js" type="text/javascript"></script>
-    <script src="/public/frontend/js/index.init.js" type="text/javascript"></script>
-@endsection

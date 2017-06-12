@@ -100,8 +100,36 @@ hr{
 }
 body{
     font-family: $raleway;
+    width: 100%;
+    height: 100%;
 }
-
+html{
+    height: 100%;
+}
+.slider{
+  .slides{
+    li{
+      .caption{        
+        h5{
+          font-size: 37px;
+          line-height: 26px;
+          margin-top: 12px;
+          @media(max-width: 560px){
+            font-size: 25px;
+          }
+        }
+        h2{
+          font-size: 64px;
+          font-weight: 500;
+          margin-top: 0;
+          @media(max-width: 560px){
+            font-size: 42px;
+          }
+        }
+      }
+    }
+  }
+}
 /*==================================
 =========== END RECURSOS ===========
 ==================================*/
@@ -441,7 +469,7 @@ body{
                 }
                 a{
                     margin-right:0px;
-                    padding: 0px 10px;
+                    padding: 0px 8px;
                     i{
                         color: $celeste;
                     }
@@ -511,7 +539,6 @@ body{
 ===================================*/
 .porqueCursania{
     padding-top: 80px;
-    margin-top: 562px;
     border-bottom:1px solid darken($blanco,15);
     img{
         position: relative;
@@ -527,13 +554,23 @@ body{
             li{
                 position:relative;
                 margin: 30px 0px;
+                @media(max-width: 600px){
+                 text-align: center;
+                }
                 img{
                     width: 100px;
                     position:absolute;
                     top: 4px;
+                    @media(max-width: 600px){
+                      position: relative;
+                      top: 0;
+                    }
                 }
                 .item{
                     margin-left: 120px;
+                    @media(max-width: 600px){
+                      margin-left: 0px;
+                    }
                     h3{
                         font-size: 27px;
                         margin: 0;

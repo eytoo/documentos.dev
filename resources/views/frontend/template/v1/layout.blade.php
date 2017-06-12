@@ -20,7 +20,7 @@
                             .st0{fill:#4795E2;}
                             .st1{fill:#2D67BA;}
                         </style>
-                        <title  id="logo_title">Delightful Demonstrations by Codrops</title>
+                        <title  id="logo_title">Cursania</title>
                         <g>
                             <path class="st0" style="background-color: fill:#4795E2;" d="M895.2,369.3H373.9l107.8-291c8.1-21.8,28.9-36.3,52.2-36.3h402.6c38.8,0,65.6,38.6,52.2,75L895.2,369.3z"/>
                             <path class="st1" style="background-color: fill:#2D67BA;" d="M895.2,404.7H373.9l107.8,291c8.1,21.8,28.9,36.3,52.2,36.3h402.6c38.8,0,65.6-38.6,52.2-75L895.2,404.7z"/>

@@ -1,25 +1,20 @@
-<div id="example" class="mightyslider_paper_skin">
-    <div class="frame">
-      <div class="slide_element">
-        <div class="slide_1" data-mightyslider="cover: '/public/frontend/img/slider/slider-1.jpg', webm: '/public/frontend/img/slider/fb_paper/851552_648195201907606_421474563_n.webm', videoFrame: 'src/videoframes/jwplayer.php'">
-          <div class="paper_intro centralizeY">
-            <div class="paper_p">Extiende tus Habilidades</div>
-            <div class="paper_h">en Programación</div>
-            <br>
-            <a class="btn btn-transparente" >Comienza Ahora</a>
-          </div>
+<div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="/public/frontend/img/slider/slider-1.jpg"  alt="slider 1 | Cursania"> <!-- random image -->
+        <div class="caption left-align">
+          <h5 class="light grey-text text-lighten-3">Extiende tus Habilidades</h5>
+          <h2>en Programación</h2>
+          <a href="#" class="btn-transparente btn waves-effect waves-ligth">Comenzar ahora</a>
         </div>
-        <div class="slide_1" data-mightyslider="cover: '/public/frontend/img/slider/slider-2.jpg', webm: '/public/frontend/img/slider/fb_paper/851552_648195201907606_421474563_n.webm', videoFrame: 'src/videoframes/jwplayer.php'">
-          <div class="paper_intro centralizeY">
-            <div class="paper_p">Cursos Online y Ofline</div>
-            <div class="paper_h">Llevalos contigo</div>
-            <br>
-            <a class="btn btn-transparente" >Comienza Ahora</a>
-          </div>
+      </li>
+      <li>
+        <img src="/public/frontend/img/slider/slider-2.jpg" alt="slider 2 | Cursania"> <!-- random image -->
+        <div class="caption left-align">
+          <h5 class="light grey-text text-lighten-3">Cursos Online y Ofline</h5>
+          <h2>Llevalos contigo</h2>
+          <a href="#" class="btn-transparente btn waves-effect waves-ligth">Comenzar ahora</a>
         </div>
-      </div>
-    </div>
-    <a class="hover icon-expand icon-lg" id="fullscreen"></a>
+      </li>
+    </ul>
   </div>
-
-  <a class="hover visible-md visible-lg" data-toggle="modal" data-target="#modal">About this slider</a>

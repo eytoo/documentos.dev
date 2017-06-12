@@ -6,7 +6,6 @@
     <!-- jQuery Library -->
     <script type="text/javascript" src="/public/frontend/js/plugins/jquery-1.11.2.min.js"></script>
     <!--materialize js-->
-    <script src="/public/frontend/plugins/material-spinner/material.spinner.js"></script>
     <script type="text/javascript" src="/public/frontend/js/materialize.min.js"></script>
     <!--scrollbar-->
     <script type="text/javascript" src="/public/frontend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -17,13 +16,8 @@
     <script src="/public/frontend/js/code.js"></script>
 
     <!-- sparkline -->
-    <script type="text/javascript" src="/public/frontend/js/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script type="text/javascript" src="/public/frontend/js/plugins/sparkline/sparkline-script.js"></script>
-
-    <!--jvectormap-->
-    <script type="text/javascript" src="/public/frontend/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script type="text/javascript" src="/public/frontend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script type="text/javascript" src="/public/frontend/js/plugins/jvectormap/vectormap-script.js"></script>
+    {{--<script type="text/javascript" src="/public/frontend/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="/public/frontend/js/plugins/sparkline/sparkline-script.js"></script>--}}
 
     <script type="text/javascript" src="/public/frontend/js/plugins.min.js"></script>
 
@@ -37,3 +31,5 @@
     <script src="/public/frontend/plugins/dacdevs/js/dacdevs.min.js"></script>
     <script src="/public/frontend/plugins/dacdevs/js/util.js"></script>
     <script type="text/javascript" src="/public/frontend/plugins/jquery-countdown/jquery.countdown.min.js"></script>
+
+    <script src="/public/frontend/plugins/material-spinner/material.spinner.js"></script>

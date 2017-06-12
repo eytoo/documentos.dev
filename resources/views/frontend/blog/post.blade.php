@@ -102,12 +102,12 @@ $sombra_cero = true;
                                     <div class="col l8 m8 s8">
                                         <h5>{{ $post->profesor->prof_nombre }}</h5>
                                         <span>{{ $post->profesor->prof_ocupacion }}</span>
-                                        <ul class="social">
+                                        {{--<ul class="social">
                                             <li><a href="" class="ease-all twitter"><i class="fa fa-twitter"></i></a></li>
                                             <li><a href="" class="ease-all facebook"><i class="fa fa-facebook"></i></a></li>
                                             <li><a href="" class="ease-all instagram"><i class="fa fa-github-alt"></i></a></li>
                                             <li><a href="" class="ease-all youtube"><i class="fa fa-google-plus"></i></a></li>
-                                        </ul>
+                                        </ul>--}}
                                     </div>
                                 </div>
                                 <div class="relacionados col l12 s12">
@@ -149,7 +149,7 @@ $sombra_cero = true;
                                                 <span>5 Comentarios</span>
                                             </div>
                                         </div>
-                                        <a class="waves-effect waves-light light-blue darken-2 btn modal-trigger botom-precio" href="#modal1"><i class="mdi-action-question-answer right"></i>Comentar ahora</a>
+                                        <a class="waves-effect waves-light light-blue darken-2 btn botom-precio" href="#"><i class="mdi-action-question-answer right"></i>Comentar ahora</a>
                                     </div>
                                 </div>
                       </div>
@@ -159,52 +159,6 @@ $sombra_cero = true;
       </section>
   </div>
 </div>
-<!-- Modal Iniciar Sección-->
-    <div id="modal1" class="modal modales">
-        <div class="modal-content">
-            <div class="iniciarSesion center">
-                <h4>Iniciar Sesión</h4>
-                <p>Ingresa tu E-mail y Contraseña</p>
-            </div>
-            <div class="row">
-                <form class="col s12 formulario">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="email">
-                            <label for="email" class="active">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="contrasena" type="text">
-                            <label for="contrasena" class="">Contraseña</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <button class="btn light-blue darken-2 waves-effect waves-light right" type="submit" name="action">Iniciar Sesión
-                            </button>
-                        </div>
-                        <div class="input-field col s6">
-                            <button class="btn light-blue darken-2 waves-effect waves-light left" type="submit" name="action">Crear mi cuenta
-                            </button>
-                        </div>
-                        <div class="input-field col s12 center">
-                            <a href="">Olvide mi contraseña</a> <br>
-                            <hr>
-                            <span>Inicia con tu Red Social</span>
-                            <ul class="social">
-                                <li><a href="" class="ease-all twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="" class="ease-all facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="" class="ease-all instagram"><i class="fa fa-github-alt"></i></a></li>
-                                <li><a href="" class="ease-all youtube"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </div>
 @endsection
 
