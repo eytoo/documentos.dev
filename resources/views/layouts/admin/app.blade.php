@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-textdirection="LTR" class="loading">
+<html lang="es" data-textdirection="LTR" class="loading">
 <head>
     @include("layouts.admin.partials.head")
     @yield("style")
@@ -46,7 +46,7 @@
 
 
 <footer class="footer footer-light navbar-fixed-bottom navbar-hide-on-scroll">
-  <p class="clearfix text-muted text-sm-center mb-0 px-2"><span class="float-md-left d-xs-block d-md-inline-block">Copyright  &copy; 2017 <a href="#" target="_blank" class="text-bold-800 grey darken-2"> DacDevs </a>, All rights reserved. </span><span class="float-md-right d-xs-block d-md-inline-block">With DacDevelopers </span></p>
+  <p class="clearfix text-muted text-sm-center mb-0 px-2"><span class="float-md-left d-xs-block d-md-inline-block">Copyright  &copy; 2017 <a href="#" target="_blank" class="text-bold-800 grey darken-2"> TaxiGanga </a>, All rights reserved. </span><span class="float-md-right d-xs-block d-md-inline-block">With DacDevelopers </span></p>
 </footer>
 
 @include("admin.partials.mainModal")

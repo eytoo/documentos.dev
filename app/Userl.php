@@ -24,4 +24,10 @@ class Userl extends Model
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function driver()
+    {
+        return $this->hasOne(Driver::class,"users_id","id");
+    }
 }
+ 

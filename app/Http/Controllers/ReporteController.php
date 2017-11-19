@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Compra;
 use App\Planta;
 use App\Productor;
-use App\Venta;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -35,6 +35,31 @@ class ReporteController extends Controller
                 ->get();
                 
         return view("admin.reportes.ventas")->with($data);
+    }
+
+    public function usuarios(Request $request){
+        $dateStart = date("Y-m-d");
+        $dateEnd   = date("Y-m-d");
+
+        if ($request->has("date-start")) {
+            $dateStart = date("Y-m-d", strtotime($request->input("date-start")));
+        }
+        if ($request->has("date-end")) {
+            $dateEnd = date("Y-m-d", strtotime($request->input("date-end")));
+        }
+        
+        $data["fechaini"] = date("d/m/Y",strtotime($dateStart));
+        $data["fechafin"] = date("d/m/Y",strtotime($dateEnd));
+
+        $data["ventas"] = User::where("created_at", ">=", $dateStart)
+                ->where("created_at", "<=", $dateEnd)
+                ->where("roles_id",1)
+                ->orderBy("created_at","desc")
+                ->get();
+
+        //        return $data;
+                
+        return view("admin.reportes.usuarios")->with($data);
     }
 
     public function compras(Request $request){

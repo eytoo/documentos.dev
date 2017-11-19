@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="author" content="DacDevs">
-    <title>Administración Cursania | Login</title>
+    <title>Administración | Login</title>
     <link rel="shortcut icon" type="image/png" href="/public/favicon.png?v=2">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
@@ -55,7 +55,7 @@
             <div class="card border-grey border-lighten-3 m-0">
                 <div class="card-header no-border">
                     <div class="card-title text-xs-center">
-                        <div class="p-1"><img style="width: 250px;" src="/public/admin/img/cursania.svg" alt="branding logo"></div>
+                        <div class="p-1"><img style="width: 160px;" src="/public/admin/img/logo.png" alt="branding logo"></div>
                     </div>
                     <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2"><span>Inicia sesión con tu cuenta</span></h6>
                 </div>

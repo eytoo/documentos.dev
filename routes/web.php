@@ -25,9 +25,9 @@ Route::get("imagenes/{entity}/{folder}/{file}", function ($entity = "cursos", $f
 
 Route::get("crear/admin", function () {
     $admin                  = new App\Admin();
-    $admin->admin_nombre    = "Cesar";
-    $admin->admin_apellidos = "Cueva Mejia";
-    $admin->admin_email     = "imarvdt@gmail.com";
+    $admin->admin_nombre    = "Mila";
+    $admin->admin_apellidos = "Alfaro Arotinco";
+    $admin->admin_email     = "milafrontend@gmail.com";
     $admin->admin_password  = Hash::make("1234");
     $admin->save();
 });
@@ -36,107 +36,119 @@ Route::get("check/admin", function () {
     return Auth::user();
 });
 
+/*
 Route::group(['domain' => 'cursania.dev'], function () {
-    Route::group(["middleware" => "web"], function () {
-        Route::get('{provider}/authorize', 'Front\AuthController@authorise');
-        Route::get('{provider}/login', 'Front\AuthController@socialLogin');
-        //Home
-        Route::get('/', 'Front\IndexController@getIndex');
-        Route::get('welcome', 'Front\IndexController@getIndexLogin')->middleware("auth.client");
+Route::group(["middleware" => "web"], function () {
+Route::get('{provider}/authorize', 'Front\AuthController@authorise');
+Route::get('{provider}/login', 'Front\AuthController@socialLogin');
+//Home
+Route::get('/', 'Front\IndexController@getIndex');
+Route::get('welcome', 'Front\IndexController@getIndexLogin')->middleware("auth.client");
 
-        Route::get('curso/{url}', 'Front\CursoController@getCurso')->name("curso");
-        Route::get('post/{url}', 'Front\BlogController@getPost');
-        Route::get('nosotros', 'Front\IndexController@getNosotros');
-        Route::get('faq', 'Front\IndexController@getFaq');
+Route::get('curso/{url}', 'Front\CursoController@getCurso')->name("curso");
+Route::get('leccion', 'Front\LeccionController@getIndex')->name("leccion");
+Route::get('post/{url}', 'Front\BlogController@getPost');
+Route::get('nosotros', 'Front\IndexController@getNosotros');
+Route::get('faq', 'Front\IndexController@getFaq');
+Route::get('error404', 'Front\IndexController@getError404');
 
-        // Autentificación
-        Route::post('auth/dologin', 'Front\AuthController@login');
-        Route::post('auth/doregister', 'Front\AuthController@registro');
-        Route::get('auth/logout', 'Front\AuthController@logout');
+// Autentificación
+Route::post('auth/dologin', 'Front\AuthController@login');
+Route::post('auth/doregister', 'Front\AuthController@registro');
+Route::get('auth/logout', 'Front\AuthController@logout');
 
-        // Comentario
-        Route::get('comentario/formulario/{tipo}/{cont_id}/{cont_url}', 'Front\ComentarioController@getFormComnetario');
-        Route::get('comentario/publicar', 'Front\ComentarioController@postComentario')->middleware("auth.client");
-        Route::post('comentario/public', 'Front\ComentarioController@postComentario')->middleware("auth.client");
-        Route::get('cur/redir', 'Front\ComentarioController@getRedireccionar')->middleware("auth.client");
-    });
-
+// Comentario
+Route::get('comentario/formulario/{tipo}/{cont_id}/{cont_url}', 'Front\ComentarioController@getFormComnetario');
+Route::get('comentario/publicar', 'Front\ComentarioController@postComentario')->middleware("auth.client");
+Route::post('comentario/public', 'Front\ComentarioController@postComentario')->middleware("auth.client");
+Route::get('cur/redir', 'Front\ComentarioController@getRedireccionar')->middleware("auth.client");
 });
+
+});*/
 
 /**
- * Rutas para la sitio de administración (Team Cursania)
+ * Rutas para la sitio de administración (tepille)
  */
-Route::group(['domain' => 'team.cursania.dev'], function () {
+/*Route::group(['domain' => '/'], function () {*/
 
-    Route::get('/', function () {
-        if (Auth::check()) {
-            return redirect("home");
-        } else {
-            return redirect('login');
-        }
-    });
-
-    Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-    Route::post('login', 'OtherController@login');
-    //Route::post('login', 'Auth\LoginController@login');
-    Route::post('logout', 'Auth\LoginController@logout');
-
-    Route::get('/home', 'HomeController@index');
-
-    Route::group(['prefix' => 'admin', "middleware" => "web", "middleware" => "auth"], function () {
-        // Roles y permisos
-        Route::resource("roles", "RoleController");
-        Route::resource("roles", "RoleController");
-        Route::post('config/saveperms', 'OtherController@guardarPermisos');
-
-        // Productores
-        Route::resource('productores', 'ProductorController');
-
-        // Plantas
-        Route::resource("plantas", "PlantaController");
-
-        //Compras
-        Route::resource("compras", "CompraController");
-
-        //Ventas
-        Route::resource("ventas", "VentaController");
-
-        //Usuarios
-        Route::resource('administradores', 'AdminController');
-        Route::resource('usuarios', 'UserController');
-
-        //Usuarios
-        Route::resource('empresa', 'EmpresaController');
-        Route::get('emp/bono', 'EmpresaController@bono');
-        Route::get('emp/cantidad', 'EmpresaController@cantidad');
-        Route::get('sistema/onof', 'EmpresaController@onof');
-        Route::get('sistema/imagenes', 'EmpresaController@imagenes');
-
-        Route::get('reportes/productores', 'ReporteController@productores')->name("reprod");
-        Route::get('reportes/ventas', 'ReporteController@ventas')->name("repventas");
-        Route::get('reportes/compras', 'ReporteController@compras')->name("repcompras");
-        Route::get('reportes/bono/productor', 'ReporteController@bonoProductor')->name("repbonopro");
-        Route::get('reportes/bono/acopio', 'ReporteController@bonoAcopio')->name("repbonoacopio");
-
-        Route::get("emp/backups", "OtherController@getBackups");
-
-        Route::resource('cursos', 'CursoController');
-        Route::resource('rubros', 'RubroController');
-        Route::resource('categorias', 'CategoriaController');
-        Route::resource('profesores', 'ProfesorController');
-        Route::resource('temas', 'TemaController');
-        Route::resource('lecciones', 'LeccionController');
-        Route::get('vimeo/validar', 'LeccionController@validar');
-
-        // Blog
-        Route::resource('postcategorias', 'PostCategoriaController');
-        Route::resource('entradas', 'PostController');
-        Route::post('post/uploadImage', 'PostController@uploadImage');
-
-        //Planes
-        Route::resource('plan', 'PlanController');
-    });
+Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect("home");
+    } else {
+        return redirect('login');
+    }
 });
+
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'OtherController@login');
+//Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout');
+
+Route::get('/home', 'HomeController@index');
+
+Route::group(['prefix' => 'admin', "middleware" => "web", "middleware" => "auth"], function () {
+    // Roles y permisos
+    Route::resource("roles", "RoleController");
+    Route::resource("roles", "RoleController");
+    Route::post('config/saveperms', 'OtherController@guardarPermisos');
+
+    // Productores
+    Route::resource('productores', 'ProductorController');
+
+    // Plantas
+    Route::resource("plantas", "PlantaController");
+
+    //Compras
+    Route::resource("compras", "CompraController");
+
+    //Ventas
+    Route::resource("ventas", "VentaController");
+
+    //Usuarios
+    Route::resource('administradores', 'AdminController');
+    Route::resource('usuarios', 'UserController');
+    Route::resource('carreras', 'CarreraController');
+    Route::resource('conductores', 'ConductorController');
+
+    Route::get('cond/vehiculo/{id}', 'ConductorController@vehiculo')->name("conductor.vehiculo");
+
+    //Usuarios
+    Route::resource('empresa', 'EmpresaController');
+    Route::get('emp/bono', 'EmpresaController@bono');
+    Route::get('emp/cantidad', 'EmpresaController@cantidad');
+    Route::get('sistema/onof', 'EmpresaController@onof');
+    Route::get('sistema/imagenes', 'EmpresaController@imagenes');
+
+    //Graficos
+    Route::get('graficos/usuarios', 'GraficoController@usuarios')->name("gusuarios");
+
+    //Reportes
+    Route::get('reportes/productores', 'ReporteController@productores')->name("reprod");
+    Route::get('reportes/usuarios', 'ReporteController@usuarios')->name("repusuarios");
+    Route::get('reportes/ventas', 'ReporteController@ventas')->name("repventas");
+    Route::get('reportes/compras', 'ReporteController@compras')->name("repcompras");
+    Route::get('reportes/bono/productor', 'ReporteController@bonoProductor')->name("repbonopro");
+    Route::get('reportes/bono/acopio', 'ReporteController@bonoAcopio')->name("repbonoacopio");
+
+    Route::get("emp/backups", "OtherController@getBackups");
+
+    Route::resource('cursos', 'CursoController');
+    Route::resource('rubros', 'RubroController');
+    Route::resource('categorias', 'CategoriaController');
+    Route::resource('profesores', 'ProfesorController');
+    Route::resource('temas', 'TemaController');
+    Route::resource('lecciones', 'LeccionController');
+    Route::get('vimeo/validar', 'LeccionController@validar');
+
+    // Blog
+    Route::resource('postcategorias', 'PostCategoriaController');
+    Route::resource('entradas', 'PostController');
+    Route::post('post/uploadImage', 'PostController@uploadImage');
+
+    //Planes
+    Route::resource('plan', 'PlanController');
+});
+//});
 
 //
 

@@ -7,3 +7,10 @@
 Homestead.json
 Homestead.yaml
 .env
+sftp-config.json
+.env.example
+/test
+/public/frontend/node_modules
+/database
+/config
+/.ebextensions

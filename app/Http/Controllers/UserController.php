@@ -30,9 +30,9 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $this->data["dataList"] = Userl::all();
+        $this->data["dataList"] = Userl::where("roles_id",1)->get();
         if ($request->has("lista") && $request->input("lista") == "eliminados") {
-            $this->data["dataList"] = Userl::onlyTrashed()->get();
+            $this->data["dataList"] = Userl::onlyTrashed()->where("roles_id",1)->get();
         }
         return view("admin." . str_slug($this->data["entity_p"]) . ".index")->with($this->data);
     }
@@ -59,7 +59,6 @@ class UserController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nombre'    => 'required|max:200',
-            'apellidos' => 'required',
             'email'     => $request->has("id") ? 'required' : 'required|unique:users',
             'modo'      => 'required',
         ]);
@@ -75,18 +74,17 @@ class UserController extends Controller
             $object = Userl::find($request->input("id"));
         }
 
-        $object->user_nombre     = $request->input("nombre");
-        $object->user_apellidos  = $request->input("apellidos");
+        $object->name     = $request->input("nombre");
         $object->email           = $request->input("email");
         $object->password        = Hash::make($request->input("password"));
         $object->user_reg_modo   = $request->input("modo");
-        $object->user_confirmado = $request->input("estado");
-        $object->user_country_id = $request->input("pais");
-        $object->user_ip         = str_slug($request->input("nombre")) . "-" . str_slug($request->input("apellidos"));
+        $object->activo = $request->input("estado");
+
+        $nombreArchivo = date("dmYHis");
 
         if ($request->hasFile('foto')) {
             $object->user_foto = $request->file('foto')->storeAs(
-                'usuario/foto', "foto-usuario-" . $object->user_ip . "." . $request->file('foto')->getClientOriginalExtension()
+                'usuario/foto', "foto-usuario-" . $nombreArchivo . "." . $request->file('foto')->getClientOriginalExtension()
             );
         }
 

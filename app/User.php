@@ -15,11 +15,28 @@ class User extends Model
     use SoftDeletes;
 
     protected $dates  = ['deleted_at'];
-    protected $hidden = array('user_password');
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 
     public function comentarios()
     {
-        return $this->hasMany(Comentario::class, "id","user_id");
+        return $this->hasMany(Comentario::class, "id", "user_id");
+    }
+
+    public function driver()
+    {
+        return $this->hasOne(Driver::class, "users_id", "id");
+    }
+
+    public function cliente()
+    {
+        return $this->hasOne(Cliente::class, "users_id", "id");
+    }
+
+    public function cards()
+    {
+        return $this->hasMany(Card::class, "user_id", "id");
     }
 
 }

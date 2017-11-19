@@ -31,4 +31,8 @@ class IndexController extends Controller
     {
       return view("frontend.faq.faq");
     }
+    public function getError404()
+    {
+      return view("frontend.error.404");
+    }
 }

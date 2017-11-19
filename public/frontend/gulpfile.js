@@ -17,15 +17,17 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist-css'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('css/estilo.scss', ['sass']);
+gulp.task('css:watch', function () {
+  gulp.watch('css/estilos.scss', ['produccion']);
+  gulp.watch('css/style.min.css', ['produccion']);
+  gulp.watch('css/materialize.min.css', ['produccion']);
 });
 
 /*
 * Configuración de la tarea 'demo'
 */
 gulp.task('produccion', function () {
-  
+
  	gulp.src([
 	  	'css/materialize.min.css',
       'plugins/preloader/css/effect1.css',

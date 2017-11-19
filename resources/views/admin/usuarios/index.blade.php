@@ -5,7 +5,7 @@
 @stop
 
 @section("styles")
-    <link rel="stylesheet" href="/plugins/dropify/dist/css/dropify.min.css">
+    <link rel="stylesheet" href="/public/admin/plugins/dropify/dist/css/dropify.min.css">
 @stop
 
 @section("action-cta")
@@ -22,7 +22,6 @@
             <th>E-mail</th>
             <th>Estado</th>
             <th>Modo Reg.</th>
-            <th>Pais</th>
             <th class="text-center"><i class="icon-cog"></i></th>
         </tr>
         </thead>
@@ -30,15 +29,20 @@
         @forelse ($dataList as $object)
             <tr>
                 <td>{{ $object->id }}</td>
-                <td><a data-modal="byUrl" href="{{ route(str_slug($entity_p).".edit",[$object->id]) }}">{{ $object->user_nombre }} {{ $object->user_apellidos }}</a></td>
+                <td><a data-modal="byUrl" href="{{ route(str_slug($entity_p).".edit",[$object->id]) }}">{{ $object->name }}</a></td>
                 <td>
                     <a href="mailto:{{ $object->email  }}">{{ $object->email  }}</a>
                 </td>
-                <td>
-                    <span class="tag tag-{{$object->user_confirmado == 0?'danger':'default'}}">{{ getEstado($object->user_confirmado) }}</span>
+                <td class="text-center">
+                    <span style="padding-top: 6px;" class="tag tag-{{$object->activo == 0?'danger':'success'}}">
+                        @if($object->activo)
+                            <i class="icon-check"></i>
+                        @else
+                            <i class="icon-close"></i>
+                        @endif
+                    </span>
                 </td>
                 <td style="text-transform:capitalize;">{{ $object->user_reg_modo }}</td>
-                <td style="text-transform:capitalize;">{{ $object->user_country_id != 0 ? App\Country::find($object->user_country_id)->name : '- No especificado-' }}</td>
                 <td class="text-center has-action">
                     <span class="dropdown">
                         <form

@@ -3,7 +3,12 @@
     <div class="navbar-header">
       <ul class="nav navbar-nav">
         <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5 font-large-1"></i></a></li>
-        <li class="nav-item"><a href="/home" class="navbar-brand nav-link"><img alt="branding logo" style="width: 232px;" src="/public/admin/img/cursania.svg" data-expand="/public/admin/robust-assets/images/logo/robust-logo-dark.png" data-collapse="/public/admin/robust-assets/images/logo/robust-logo-small.png" class="brand-logo"></a></li>
+        <li class="nav-item">
+          <a href="/home" class="navbar-brand nav-link">
+            <!--<img alt="branding logo" style="width: 180px;" src="/public/admin/img/logo-top.png" data-expand="/public/admin/robust-assets/images/logo/robust-logo-dark.png" data-collapse="/public/admin/robust-assets/images/logo/robust-logo-small.png" class="brand-logo">-->
+            <h1 style="margin-top: 9px;">Sistema de gestion de documentos</h1>
+          </a>
+        </li>
         <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container"><i class="icon-ellipsis pe-2x icon-icon-rotate-right-right"></i></a></li>
       </ul>
     </div>

@@ -13,7 +13,7 @@ sub,
 sup {
     vertical-align: baseline
 }
-
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800');
 .collapsing,
 .embed-responsive,
 .media,
@@ -424,7 +424,8 @@ div#myTable_length {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;*/
+    font-family:'Raleway', sans-serif;
     font-size: 1rem;
     line-height: 1.45;
     color: #373a3c;
@@ -2681,7 +2682,7 @@ fieldset[disabled] a.btn {
 .open>.btn-primary.dropdown-toggle:hover {
     color: #fff;
     background-color: #2d67ba;
-    border-color: #2158a7
+    /* border-color: #2158a7 */
 }
 
 .btn-primary.disabled.focus,
@@ -4766,8 +4767,8 @@ tbody.collapse.in {
     z-index: 2;
     color: #fff;
     cursor: default;
-    background-color: #4795e2;
-    border-color: #4795e2
+    background-color: #040404;
+    border-color: #00ea00;
 }
 
 .page-item.disabled .page-link,
